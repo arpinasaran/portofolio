@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Mail, Linkedin, ChevronDown } from "lucide-react"
+import { Mail, Linkedin, Github, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -20,11 +20,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-10 mix-blend-overlay pointer-events-none"></div>
           <div className="w-full md:w-1/2 space-y-6 text-center md:text-left mb-10 md:mb-0">
             <h1 className="font-serif text-4xl md:text-6xl font-bold tracking-tight text-cream-beige uppercase">
-              Hi, I'm Arvin Wijayanto!
+              Hi, I&apos;m Arvin Wijayanto!
             </h1>
             <p className="font-sans text-xl md:text-2xl text-cream-beige/90">
-              A passionate explorer in technology and innovation, constantly driven by curiosity and meaningful
-              connections.
+              AI/ML enthusiast focused on Indonesian NLP and multilingual LLM systems. Research and competition track record across Bahasa Indonesia and regional languages.
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <Button
@@ -42,7 +41,17 @@ export default function Home() {
                 className="bg-cream-beige text-maroon-red transition-all duration-300 font-medium"
                 asChild
               >
-                <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=arvinwijayanto2@gmail.com&su=Halo%20Arvin&body=Hai%20Arvin%2C%20saya%20tertarik%20dengan%20portofoliomu!">
+                <Link href="https://github.com/arpinasaran" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub
+                </Link>
+              </Button>
+              <Button
+                variant="outline"
+                className="bg-cream-beige text-maroon-red transition-all duration-300 font-medium"
+                asChild
+              >
+                <Link href="mailto:arvinwijayanto2@gmail.com">
                   <Mail className="mr-2 h-4 w-4" />
                   Email
                 </Link>
@@ -81,48 +90,24 @@ export default function Home() {
 
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-bold text-cream-beige">Eagerness to Explore</h3>
+                <h3 className="font-serif text-2xl font-bold text-cream-beige">Indonesian NLP, by Choice</h3>
                 <p className="text-lg leading-relaxed text-cream-beige/90">
-                  My curiosity knows no bounds, pushing me to explore diverse areas beyond academic subjects alone. One
-                  notable instance was during my recent holiday when I ventured into building a simple robotic car using
-                  Arduino. This project not only challenged me to step outside my comfort zone but also ignited my
-                  creativity, allowing me to see tangible results and experience genuine excitement when my creation
-                  came to life. Such explorations broaden my perspective and constantly fuel my strategic thinking and
-                  insatiable love for learning.
+                  I spend most of my time on Bahasa Indonesia and Javanese NLP problems: building datasets, fine-tuning encoder models (IndoBERT, IndoBERTweet), and lately fine-tuning open-source LLMs (Qwen3.5 via Unsloth/LoRA) for regional-language use cases. My work sits between research (with Dr. Fajri Koto at MBZUAI) and applied competitions/hackathons.
                 </p>
 
                 <div className="flex flex-wrap gap-2 justify-center my-6">
-                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">
-                    Strategist
-                  </Badge>
-                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">
-                    Philomath
-                  </Badge>
+                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">Indonesian NLP</Badge>
+                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">LLM Fine-tuning</Badge>
+                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">Dataset Curation</Badge>
+                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">Multilingual Retrieval</Badge>
                 </div>
               </div>
 
               <div className="space-y-4">
-                <h3 className="font-serif text-2xl font-bold text-cream-beige">Leadership Personality</h3>
+                <h3 className="font-serif text-2xl font-bold text-cream-beige">Leading and Teaching</h3>
                 <p className="text-lg leading-relaxed text-cream-beige/90">
-                  My leadership style revolves around empathy, guidance, and collective enjoyment. A prime example was
-                  during a class assignment to produce a musical video. Despite having no prior experience, I quickly
-                  learned video production and assumed the role of director. My teammates, equally inexperienced, found
-                  support and confidence through my leadership, resulting in a pleasant and successful shoot. Our
-                  collaborative efforts culminated in receiving an 'A' grade, highlighting my effectiveness in managing
-                  both project quality and team morale.
+                  Outside research, I led the largest student-run data competition in Indonesia (Datathon RISTEK Fasilkom UI 2025, 800+ participants, IDR 500M sponsorship), and mentor 100+ members as Data Science Lead at GDG Fasilkom UI. On the side, I coach high-school olympiad teams (NOI, NOAI), with multiple coachees medaling at national level.
                 </p>
-
-                <div className="flex flex-wrap gap-2 justify-center my-6">
-                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">
-                    Deliverer
-                  </Badge>
-                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">
-                    Empathizer
-                  </Badge>
-                  <Badge className="bg-cream-beige text-forest-green hover:bg-cream-beige/80 text-sm py-2 px-4 font-medium">
-                    Coach
-                  </Badge>
-                </div>
               </div>
             </div>
           </div>
@@ -130,37 +115,28 @@ export default function Home() {
 
         {/* Education Section - Maroon */}
         <section id="education" className="py-16 px-6 md:px-12 section-maroon-red">
-          <div className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-full md:w-2/3 space-y-6">
-                <div className="inline-block px-3 py-1 bg-cream-beige/20 text-cream-beige rounded-md mb-2 uppercase text-sm font-medium tracking-wider">
-                  Education
-                </div>
-                <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige">My Education</h2>
-
-                <p className="text-lg leading-relaxed text-cream-beige/90">
-                  My educational journey has been a continuous quest for self-improvement and excellence. Starting from
-                  a prestigious Islamic middle school in Central Java, I pushed myself to attend one of Indonesia's
-                  top-ranked high schools, ultimately securing a place at Universitas Indonesia, the nation's best
-                  university. Each step of my academic path reflects determination, adaptability, and a commitment to
-                  growth. Yet, I see this as just the beginning—my ambitions extend further, envisioning advanced
-                  studies culminating in a Ph.D. from a globally recognized university, empowering me to make
-                  significant, lasting contributions to the world.
-                </p>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="text-center">
+              <div className="inline-block px-3 py-1 bg-cream-beige/20 text-cream-beige rounded-md mb-4 uppercase text-sm font-medium tracking-wider">
+                Education
               </div>
-
-              <div className="w-full md:w-1/3 hidden md:flex justify-center">
-                <div className="relative w-40 h-40">
-                  <Image
-                    src="/images/makara-ui-yellow.png"
-                    alt="Makara UI Logo"
-                    width={160}
-                    height={160}
-                    className="object-contain"
-                  />
-                </div>
-              </div>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige">My Education</h2>
             </div>
+            <Card className="border-cream-beige/30 bg-cream-beige/10">
+              <CardContent className="p-6 space-y-2">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-xl font-bold text-cream-beige">Universitas Indonesia — Faculty of Computer Science</h3>
+                  <span className="text-sm text-cream-beige/80">Aug 2023 — Present</span>
+                </div>
+                <p className="text-cream-beige/90">B.Sc. Computer Science · GPA 3.80 / 4.00</p>
+                <p className="text-cream-beige/90">
+                  Tanoto Foundation Scholarship Awardee · 3rd Place, Outstanding Student Award (Mawapres), Fasilkom UI 2025
+                </p>
+                <p className="text-cream-beige/80 text-sm pt-2">
+                  Relevant coursework: Artificial Intelligence, Data Science, Information Retrieval, Statistics, Database, Big Data.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </section>
 
@@ -177,33 +153,52 @@ export default function Home() {
             <div className="space-y-8">
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
-                  <div className="inline-block px-2 py-0.5 bg-cream-beige/20 text-cream-beige rounded text-sm mb-2">
-                    Present
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="text-xl font-bold text-cream-beige">AI Engineer Intern</h3>
+                    <span className="text-sm text-cream-beige/80">Dec 2025 — Feb 2026</span>
                   </div>
-                  <h3 className="text-xl font-bold text-cream-beige">AI Engineer Intern</h3>
-                  <p className="text-lg text-cream-beige/80">Sobatbisnis</p>
+                  <p className="text-lg text-cream-beige/80">Pintarly</p>
                   <p className="mt-2 text-cream-beige/90">
-                    Developing impactful AI solutions to enhance business intelligence.
+                    Indonesia&apos;s fastest-growing edutech startup, reaching 100,000+ users within 4 months. Engineered multi-personality Bahasa Indonesia AI chatbots and a Manim-based educational video generation pipeline (30 chapters in 7 subjects) with three-provider TTS fallback and 2.8x throughput improvement.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-cream-beige">Teaching Assistant Coordinator</h3>
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="text-xl font-bold text-cream-beige">AI &amp; Data Engineer</h3>
+                    <span className="text-sm text-cream-beige/80">Jun — Aug 2025</span>
+                  </div>
+                  <p className="text-lg text-cream-beige/80">Sobat Bisnis Group (SBG)</p>
                   <p className="mt-2 text-cream-beige/90">
-                    Coordinating teaching assistants for challenging courses like Data Structures & Algorithms and
-                    teaching foundational programming concepts.
+                    Indonesian enterprise IT and AI consulting firm backed by Mayapada Group. Prototyped a LangChain text-to-SQL summarization pipeline in Bahasa Indonesia; developed Indonesian KYC document extraction (KTP, SIM) using Qwen-VL, time-series food inventory forecasting, and an MVP image-to-caption automation for Shopee marketplace.
                   </p>
                 </CardContent>
               </Card>
 
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-cream-beige">Olympiad Tutor</h3>
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="text-xl font-bold text-cream-beige">Teaching Assistant</h3>
+                    <span className="text-sm text-cream-beige/80">2024 — Present</span>
+                  </div>
+                  <p className="text-lg text-cream-beige/80">Universitas Indonesia (Fasilkom UI)</p>
                   <p className="mt-2 text-cream-beige/90">
-                    Mentoring high school students for the National Olympiad in Informatics, guiding three students to
-                    national finals.
+                    Teaching Assistant for Data Structures &amp; Algorithms and Foundation of Programming 2, authoring problem-solving exercises, leading in-class sessions, and mentoring undergraduate students.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h3 className="text-xl font-bold text-cream-beige">Olympiad Coach</h3>
+                    <span className="text-sm text-cream-beige/80">2024 — Present</span>
+                  </div>
+                  <p className="text-lg text-cream-beige/80">KOJA Olimpiade &amp; Private Coaching</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Coached 100+ high-school students for NOI (National Olympiad in Informatics) and NOAI (National Olympiad in AI); multiple coachees won medals and finalist placements at the national level.
                   </p>
                 </CardContent>
               </Card>
@@ -211,43 +206,42 @@ export default function Home() {
 
             <div className="mt-12">
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8 text-center">
-                Another Experience
+                Leadership &amp; Service
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="border-cream-beige/30 bg-cream-beige/10">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-cream-beige">Project Director - Datathon</h3>
+                    <h3 className="text-xl font-bold text-cream-beige">Project Officer · Datathon RISTEK 2025</h3>
                     <p className="mt-2 text-cream-beige/90">
-                      Leading Indonesia's largest data science competition, fostering innovation among bright minds.
+                      Led a 30-person organizing team for the largest student-run data competition in Indonesia (800+ participants); secured IDR 500M sponsorship, ran a 500+ attendee offline workshop with national media partner coverage and Indonesian minister attendance.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-cream-beige/30 bg-cream-beige/10">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-cream-beige">Vice Project Director - Referendum TSA UI</h3>
+                    <h3 className="text-xl font-bold text-cream-beige">Data Science Lead · GDG Fasilkom UI 2025</h3>
                     <p className="mt-2 text-cream-beige/90">
-                      Managing the university-wide election process for TSA UI presidency.
+                      Mentored 100+ members through an end-to-end data science curriculum from fundamentals to advanced topics; designed workshops, study groups, and project guidance.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-cream-beige/30 bg-cream-beige/10">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-cream-beige">Volunteer - Jakarta Mengabdi</h3>
+                    <h3 className="text-xl font-bold text-cream-beige">Vice Project Director · Referendum TSA UI</h3>
                     <p className="mt-2 text-cream-beige/90">
-                      Engaged in impactful activities, teaching and empowering communities across Jakarta.
+                      Managed the university-wide election process for TSA UI presidency.
                     </p>
                   </CardContent>
                 </Card>
 
                 <Card className="border-cream-beige/30 bg-cream-beige/10">
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-cream-beige">Volunteer - GDGOC Academic Team</h3>
+                    <h3 className="text-xl font-bold text-cream-beige">Volunteer · Jakarta Mengabdi &amp; GDGOC Academic Team</h3>
                     <p className="mt-2 text-cream-beige/90">
-                      Facilitating the KRITIS program, empowering high school students to address sustainable
-                      development goals (SDGs) practically.
+                      Engaged in community teaching activities across Jakarta; facilitated the KRITIS program empowering high-school students to address sustainable development goals.
                     </p>
                   </CardContent>
                 </Card>
@@ -263,20 +257,17 @@ export default function Home() {
               <div className="inline-block px-3 py-1 bg-cream-beige/20 text-cream-beige rounded-md mb-4 uppercase text-sm font-medium tracking-wider">
                 Recognition
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8">My Achievement</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8">Achievements</h2>
             </div>
 
             <div className="space-y-6">
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold">1st</div>
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">1st</div>
                     <div>
-                      <h3 className="text-xl font-bold text-cream-beige">Champion - Gov AI Hackathon 2024</h3>
-                      <p className="mt-1 text-cream-beige/90">
-                        Winner of national AI competition hosted by the Ministry of Finance, developing "Nusantap," an
-                        app optimizing nutritional meals.
-                      </p>
+                      <h3 className="text-xl font-bold text-cream-beige">Innovation Frontier #1 — Bank Indonesia &amp; OJK Hackathon 2025</h3>
+                      <p className="mt-1 text-cream-beige/90">SRIKANDI: multi-modal AI for village cooperative intervention across 83,762 Indonesian villages.</p>
                     </div>
                   </div>
                 </CardContent>
@@ -285,12 +276,10 @@ export default function Home() {
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold">3rd</div>
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">1st</div>
                     <div>
-                      <h3 className="text-xl font-bold text-cream-beige">3rd Runner-Up - Data Mining GEMASTIK 2024</h3>
-                      <p className="mt-1 text-cream-beige/90">
-                        Developed AI-based automation solutions for Jakarta's Super App.
-                      </p>
+                      <h3 className="text-xl font-bold text-cream-beige">Champion — Gov-AI Hackathon Kementerian Keuangan 2024 (IDR 50M)</h3>
+                      <p className="mt-1 text-cream-beige/90">NutriAI: ResNet50 + OpenAI fine-tuned Bahasa Indonesia chatbot + recommender for Indonesia&apos;s Free Nutritious Meals (MBG) program.</p>
                     </div>
                   </div>
                 </CardContent>
@@ -299,14 +288,91 @@ export default function Home() {
               <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
-                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold">2nd</div>
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">1st</div>
                     <div>
-                      <h3 className="text-xl font-bold text-cream-beige">
-                        2nd Runner-Up - Most Outstanding Student Compsci UI
-                      </h3>
-                      <p className="mt-1 text-cream-beige/90">
-                        Recognized for developing "Leximate," an app supporting dyslexic individuals.
-                      </p>
+                      <h3 className="text-xl font-bold text-cream-beige">1st Place — FIT Competition 2025</h3>
+                      <p className="mt-1 text-cream-beige/90">Satellite image segmentation and weather classification (100+ teams).</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">2nd</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">2nd Place — ParkTheGate Hackathon 2025</h3>
+                      <p className="mt-1 text-cream-beige/90">ALPR license-plate recognition using YOLO and OpenCV.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">HM</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">Gemastik 2025 Honorable Mention + Rank 1 Leaderboard</h3>
+                      <p className="mt-1 text-cream-beige/90">Aksara Jawa Hanacaraka OCR: no-internet competition coded from scratch, highest accuracy across all teams using ResNet.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">HM</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">Gemastik 2024 Honorable Mention + Publication</h3>
+                      <p className="mt-1 text-cream-beige/90">JAKI citizen-report classification (IndoBERTweet + Continual Learning, F1 Micro 0.7465). Published in Buletin Pagelaran Mahasiswa Nasional Bidang TIK, Vol. 1, Jun 2024.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">3rd</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">3rd Place — Outstanding Student Award (Mawapres), Fasilkom UI 2025</h3>
+                      <p className="mt-1 text-cream-beige/90">Faculty-level award recognizing academic and extracurricular achievement.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">★</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">Best Presentation — Airnology Datathon 2024</h3>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">★</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">Bronze Medal — OSN Informatika 2022 (Indonesian National Science Olympiad)</h3>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-cream-beige rounded-full p-3 text-maroon-red font-bold min-w-[3rem] text-center">★</div>
+                    <div>
+                      <h3 className="text-xl font-bold text-cream-beige">Finalist — ICPC Regional Asia-Jakarta 2024</h3>
                     </div>
                   </div>
                 </CardContent>
@@ -317,34 +383,107 @@ export default function Home() {
 
         {/* Projects Section - Forest Green */}
         <section id="projects" className="py-16 px-6 md:px-12 section-forest-green">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-5xl mx-auto space-y-8">
             <div className="text-center">
               <div className="inline-block px-3 py-1 bg-cream-beige/20 text-cream-beige rounded-md mb-4 uppercase text-sm font-medium tracking-wider">
                 Portfolio
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8">My Project</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-2">Research &amp; Projects</h2>
+              <p className="text-cream-beige/80 text-sm">Decks and writeups available on request.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border-cream-beige/30 overflow-hidden bg-cream-beige/10">
-                <div className="h-48 relative">
-                  <Image src="/images/nusantap-app.png" alt="Nusantap Project" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-30 mix-blend-overlay"></div>
-                </div>
+            <h3 className="font-serif text-2xl font-bold text-cream-beige mt-8">Research &amp; Publications</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-cream-beige">Nusantap</h3>
-                  <p className="mt-2 text-cream-beige/90">AI-driven meal optimization.</p>
+                  <h3 className="text-xl font-bold text-cream-beige">Culturally Aware Indonesian NLP Research</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Ongoing · with Dr. Fajri Koto (MBZUAI) &amp; Dr. Rahmad Mahendra (Fasilkom UI)</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Systematic review and evaluation of 20+ Indonesian NLP benchmarks against cultural relevance criteria; designing annotation guidelines grounded in 11 cultural proxy dimensions (Liu et al., 2025).
+                  </p>
                 </CardContent>
               </Card>
 
-              <Card className="border-cream-beige/30 overflow-hidden bg-cream-beige/10">
-                <div className="h-48 relative">
-                  <Image src="/images/jaki-app.jpg" alt="JAKI Report Automation" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-[url('/grain-texture.png')] opacity-30 mix-blend-overlay"></div>
-                </div>
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-cream-beige">JAKI Report Automation</h3>
-                  <p className="mt-2 text-cream-beige/90">Public report classification automation.</p>
+                  <h3 className="text-xl font-bold text-cream-beige">JAKI Citizen Report Classification</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Gemastik 2024 HM · Published, Buletin Mahasiswa Nasional TIK Vol. 1</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Curated, preprocessed, and tokenized a 161,547-report Bahasa Indonesia dataset. Fine-tuned IndoBERTweet with Continual Learning (replay buffer), achieving F1 Micro 0.7465.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">IndoMath</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Research contribution · MBZUAI-led collaboration</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Contributed to a benchmark evaluating global frontier LLMs (GPT, Gemini, Claude, Qwen) on Indonesian culturally-grounded mathematics questions in Bahasa Indonesia.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <h3 className="font-serif text-2xl font-bold text-cream-beige mt-10">Competitions &amp; Hackathons</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">Merdesa</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Lead Architect · 1st Submission Digdaya Hackathon 2026 (BI &amp; OJK)</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Javanese multidialect (Ngoko, Krama, Ngapak) WhatsApp AI agent for the Indonesian government Village Cooperative program. Fine-tuning Qwen3.5-Instruct via LoRA bf16 (Unsloth) for &gt;90% transaction-extraction accuracy vs ~65% GPT-4 baseline.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">SRIKANDI</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Innovation Frontier #1 · BI–OJK Hackathon 2025</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Multi-modal AI for village cooperative intervention across 83,762 Indonesian villages: IndoBERT + BERTopic-style topic modelling, U-Net for satellite land-use segmentation, multi-modal NN fusion, and a personalized Parent-Child Retrieval RAG chatbot.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">NutriAI</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Juara 1 (IDR 50M) · Gov-AI Hackathon Kemenkeu 2024</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    AI pipeline for the MBG (Free Nutritious Meals) program: ResNet50 for nutritional-deficiency detection from child photos, OpenAI-based Bahasa Indonesia Q&amp;A chatbot, and a recommendation system for personalized meal plans.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">Satria Data NLP Classification</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">National Data Science Competition 2024 &amp; 2025 (Semifinalist 2025)</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Bahasa Indonesia text classification (emotion, topic) experimenting across IndoBERT, IndoBERTweet, BERT, BERT+GBT hybrid, with data augmentation, layer freezing, pseudo-labeling, stacking, and k-fold CV.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">Bobobu Health AI Backend</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Client work · FK UIN Jakarta Pilmapres submission</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Three multimodal AI backend features: NutriBot (Bahasa Indonesia chatbot grounded on AKG 2019), NutriScan (food image analysis via GPT-4V), Conjunctiva (anemia detection from eye images). Stack: Hono, Cloudflare Workers, D1.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-cream-beige/30 bg-cream-beige/10">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-cream-beige">Multi-lingual Polyglot Search Engine</h3>
+                  <p className="text-sm italic text-cream-beige/70 mt-1">Information Retrieval project</p>
+                  <p className="mt-2 text-cream-beige/90">
+                    Multilingual semantic search engine using BGE, Jina, and Qwen embedding models, with multi-language query expansion to improve cross-lingual recall across Bahasa Indonesia and other languages.
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -372,15 +511,12 @@ export default function Home() {
               <div className="inline-block px-3 py-1 bg-cream-beige/20 text-cream-beige rounded-md mb-4 uppercase text-sm font-medium tracking-wider">
                 Vision
               </div>
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8">Future Mission</h2>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-cream-beige mb-8">Where I&apos;m Going</h2>
             </div>
 
             <div className="space-y-6 text-cream-beige/90">
               <p className="text-lg leading-relaxed">
-                My aspiration is to become a CTO/CIO in a prominent tech company, leveraging my passion for designing
-                impactful technology systems. My vision is to create intuitive, effective technological solutions that
-                enhance organizational productivity, foster seamless human-technology interactions, and transform my
-                workplace into a highly efficient and innovative environment.
+                I want to keep building Indonesian-first AI: language models that understand Bahasa Indonesia and regional languages the way Indonesians actually speak them, evaluated against benchmarks that take culture seriously. Near-term, that means shipping Merdesa beyond a hackathon proposal, continuing cultural-NLP research with MBZUAI, and joining a team where Indonesian-language AI is a first-class problem.
               </p>
             </div>
           </div>
@@ -412,7 +548,18 @@ export default function Home() {
                 className="text-cream-beige hover:text-maroon-red hover:bg-cream-beige/20 transition-all duration-300"
                 asChild
               >
-                <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=arvinwijayanto2@gmail.com&su=Halo%20Arvin&body=Hai%20Arvin%2C%20saya%20tertarik%20dengan%20portofoliomu!">
+                <Link href="https://github.com/arpinasaran" target="_blank" rel="noopener noreferrer">
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </Link>
+              </Button>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="text-cream-beige hover:text-maroon-red hover:bg-cream-beige/20 transition-all duration-300"
+                asChild
+              >
+                <Link href="mailto:arvinwijayanto2@gmail.com">
                   <Mail className="h-5 w-5" />
                   <span className="sr-only">Email</span>
                 </Link>

@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 79% 86%;
+    --foreground: 180 25% 25%;
+
+    --card: 43 79% 86%;
+    --card-foreground: 180 25% 25%;
+
+    --popover: 43 79% 86%;
+    --popover-foreground: 180 25% 25%;
+
+    --primary: 180 25% 25%;
+    --primary-foreground: 43 79% 86%;
+
+    --secondary: 0 62% 43%;
+    --secondary-foreground: 43 79% 86%;
+
+    --muted: 43 20% 80%;
+    --muted-foreground: 180 15% 35%;
+
+    --accent: 43 79% 86%;
+    --accent-foreground: 180 25% 25%;
+
+    --highlight: 43 60% 57%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 43 30% 75%;
+    --input: 43 30% 75%;
+    --ring: 180 25% 25%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Film grain effect */
+.grain-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/grain-texture.png");
+  opacity: 0.1;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Section background utilities */
+.section-forest-green {
+  background-color: #2f4f4f;
+  color: #f6e7c1;
+}
+
+.section-maroon-red {
+  background-color: #b22a2a;
+  color: #f6e7c1;
+}
+
+/* Enhanced button visibility */
+.btn-enhanced {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-width: 2px;
+  font-weight: 500;
+}
+
+.btn-enhanced:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Improved contrast for buttons on dark backgrounds */
+.section-forest-green .btn-enhanced,
+.section-maroon-red .btn-enhanced {
+  background-color: rgba(246, 231, 193, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.section-forest-green .btn-enhanced:hover,
+.section-maroon-red .btn-enhanced:hover {
+  background-color: #f6e7c1;
+  color: #2f4f4f;
+}
+
+/* Navigation button improvements */
+.nav-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(246, 231, 193, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.nav-button:hover::before {
+  left: 100%;
+}
